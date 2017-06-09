@@ -1,11 +1,11 @@
 - clean: ['~']
 
 - link:
+    ~/.vimrc: vim/vimrc
+    ~/.vim: vim
     ~/.bashrc: bashrc
     ~/.gitconfig: gitconfig
     ~/.ssh/config:
         path: ssh/config
         create: true
     ~/.tmux.conf: tmux.conf
-
-
