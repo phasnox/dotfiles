@@ -3,7 +3,12 @@
 - link:
     ~/.vimrc: vim/vimrc
     ~/.vim: vim
-    ~/.bashrc: bashrc
+    ~/.bash_colors:
+      force: true
+      path: bash_colors
+    ~/.bashrc:
+      force: true
+      path: bashrc
     ~/.gitconfig: gitconfig
     ~/.ssh/config:
         path: ssh/config
