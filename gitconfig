@@ -1,0 +1,17 @@
+[user]
+	name = Guillermo Castillo
+	email = phasnox@gmail.com
+[alias]
+	co = checkout
+	coa = checkout AXPT-
+[diff]
+	tool = gvimdiff
+[core]
+	editor = vim
+[push]
+	default = simple
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
