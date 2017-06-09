@@ -1,0 +1,205 @@
+" ==========================================================================
+" ==============================VUNDLE START================================
+" ==========================================================================
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'Townk/vim-autoclose'
+Plugin 'scrooloose/nerdtree'
+Plugin 'w0rp/ale'
+Plugin 'wincent/command-t'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" ==========================================================================
+" =============================END VUNDLE===================================
+" ==========================================================================
+
+" Automatic .vimrc reloading
+autocmd! bufwritepost ~/.vimrc source % 
+
+" jk is escape
+inoremap jk <esc>
+
+" Shows cursor line
+set cursorline
+
+let mapleader=","
+syntax on
+set nocompatible
+
+" Exclude files 
+set wildignore+=*.png,*.jpg,*.o,*.pyc,*node_modules/**,*bower_components/**,.git/**,venv/**
+
+" Vertical diff split
+set diffopt=vertical
+
+" Better copy paste
+set pastetoggle=<F2>
+set clipboard=unnamedplus
+
+colorscheme phasma2
+set autoindent
+set backspace=2
+set cindent
+set number
+set smartindent
+
+" Search helpers
+set hlsearch
+set showcmd            " Show (partial) command in status line.
+set showmatch          " Show matching brackets.
+set ignorecase         " Do case insensitive matching
+set smartcase          " Do smart case matching
+set incsearch          " Incremental search
+set autowrite          " Automatically save before commands like :next and :make
+set hidden             " Hide buffers when they are abandoned
+set mouse=a            " Enable mouse usage (all modes)
+
+" swap file disable
+set nobackup
+set nowritebackup
+set noswapfile
+
+" Indentation issues
+set tabstop=8
+set expandtab
+set softtabstop=4
+set shiftwidth=4
+
+set tw=79          " width del documento
+set nowrap         " no auto wrap on load
+set fo-=t          " no auto wrap when typing
+set colorcolumn=80
+let &colorcolumn=join(range(81,999),",")
+
+" Have Vim jump to the last position when reopening a file
+if has("autocmd")
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+" Folding code
+"---------------
+set foldmethod=syntax
+set foldlevelstart=2
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview 
+
+"Autoclose comment buffer
+autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+
+" File type definitions
+autocmd BufNewFile,BufRead *.json,*.jsx,*.babelrc set ft=javascript
+
+" Filetype tabs
+" ==================================
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype css setlocal ts=2 sts=2 sw=2
+autocmd Filetype scss setlocal ts=2 sts=2 sw=2
+autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
+
+" ===================================
+" ============= KeyMaps =============
+" ===================================
+
+" Copy file path to the clipboard
+noremap <leader>p :let @+=@%<CR>
+
+" FuzzySearch
+"noremap <F3> :FufCoverageFile<CR>
+map <F3> :CommandT<CR>
+
+" Save shortcut all buffers
+noremap <F5> :wall<CR>
+
+" ======================
+" Splits/buffers navigation
+" ======================
+
+" Navigate through splits
+map <c-h> <c-w>h
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+
+" Manejo del size de los splits
+map <C-S-Right> <C-W>>
+map <C-S-Left> <C-W><
+map <C-S-Up> <C-w>+
+map <C-S-Down> <C-w>-
+map <F9> <C-W>=
+
+
+" Semicolon shortcut
+noremap ; :
+vnoremap ; :
+
+" Search text selected
+vnoremap // y/<C-R>"<CR>
+
+" Ver la historia de un archivo
+map <leader>h :GundoToggle<CR>
+
+set omnifunc=syntaxcomplete#Complete
+"Map ctrl+space instead of ctrl-o ctrl-x
+inoremap <expr> <C-Space> pumvisible() \|\| &omnifunc == '' ?
+\ "\<lt>C-n>" :
+\ "\<lt>C-x>\<lt>C-o><c-r>=pumvisible() ?" .
+\ "\"\\<lt>c-n>\\<lt>c-p>\\<lt>c-n>\" :" .
+\ "\" \\<lt>bs>\\<lt>C-n>\"\<CR>"
+imap <C-@> <C-Space>
+
+" Python3 omnicomplete
+set omnifunc=python3complete#Complete
+
+
+" format JSON
+map <Leader>j !python -m json.tool<CR>
+
+map <C-n> :NERDTreeToggle<CR>
+map <Leader>f :NERDTreeFind<CR>
+let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules']
+
+
+" Helps lag when scrolling
+" set lazyredraw
+
+" ---------------------
+" Vimbits
+" ---------------------
+
+" Clear search highlights
+noremap <silent><Leader>/ :nohls<CR
+
+" Turn off arrow keys in normal mode
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+
+" Turn off search hilghlights
+noremap <silent><Leader>/ :nohls<CR
+let g:ruby_path = system('echo $HOME/.rbenv/shims')
+set re=1
+set ttyfast
+set lazyredraw
+
+" Powerline
+set rtp+=/usr/local/lib/python3.4/dist-packages/powerline/bindings/vim/
+" Always show statusline
+set laststatus=2
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256
