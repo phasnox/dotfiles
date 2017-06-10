@@ -1,4 +1,6 @@
 source ~/.bash_colors
+source /usr/share/git-core/contrib/completion/git-prompt.sh
+
 # for examples
 # If not running interactively, don't do anything
 case $- in
@@ -156,8 +158,8 @@ alias ta="env TERM=xterm-256color tmux attach"
 
 alias gitfixup="git commit -a --fixup HEAD && git rebase -i --autosquash HEAD~2"
 
-alias prokey="python ~/src/src/python/prokey.py"
-alias bgyekey="python ~/src/src/python/bgyeKey.py"
+alias prokey="python ~/src/python/prokey.py"
+alias bgyekey="python ~/src/python/bgyeKey.py"
 pythonaddmod() {
     mkdir $1 && touch "$1/__init__.py"
 }
@@ -172,14 +174,9 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 coa() {
     git co AXPT-$1
 }
-#eval "$(rbenv init -)"
-#source ~/.nvm/nvm.sh
 export SKIP_SAML="yes"
 alias iszvpn='(cd /home/phasnox/Dropbox/bairesdev/ && sudo openvpn --config bairesdev_gcastillo-zephyr-config.ovpn)'
 alias iszapi='cd ~/src/iseatz/developer-setup && vagrant up api && vagrant ssh api'
 alias iszamex='cd ~/src/iseatz/developer-setup && vagrant up amex && vagrant ssh amex'
 alias iszihg='cd ~/src/iseatz/developer-setup && vagrant up z2 && vagrant ssh z2'
 alias iszdb='psql -h 54.208.90.157 -U postgres simian_qa'
-source '/home/phasnox/iseatz/z2/amex/changeModuleName.sh'
-
-#alias iszvagrant='cd ~/src/iseatz/developer-setup && vagrant up gemini && vagrant ssh gemini'
