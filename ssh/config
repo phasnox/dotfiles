@@ -1,18 +1,15 @@
 Host bitbucket-iseatz
  HostName bitbucket.org
- IdentityFile ~/.ssh/iseatz_desktop
+ IdentityFile ~/.ssh/work
 Host bitbucket-phasnox
  HostName bitbucket.org
- IdentityFile ~/.ssh/phasnox_desktop
+ IdentityFile ~/.ssh/personal
 Host bitbucket-sequbot
  HostName bitbucket.org
- IdentityFile ~/.ssh/sequbot_desktop
+ IdentityFile ~/.ssh/personal
 Host github-phasnox
  HostName github.com
- IdentityFile ~/.ssh/phasnox_desktop
-Host debian-vaio
- HostName 192.168.1.202
- IdentityFile ~/.ssh/phasnox_desktop
+ IdentityFile ~/.ssh/personal
 Host sequbot-production
  HostName sequbot-production
- IdentityFile ~/.ssh/phasnox_desktop
+ IdentityFile ~/.ssh/personal
