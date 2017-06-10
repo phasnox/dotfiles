@@ -12,51 +12,51 @@
     stderr: true
 
 - link:
-  ~/.vimrc: vim/vimrc
-  ~/.vim: vim
-  ~/.bash_colors:
-    force: true
-    path: bash_colors
-  ~/.bashrc:
-    force: true
-    path: bashrc
-  ~/.gitconfig: gitconfig
-  ~/.ssh/config:
-      path: ssh/config
-      create: true
-  ~/.tmux.conf: tmux.conf
-  ~/src/python:
-      path: scripts/python
-      create: true
+    ~/.vimrc: vim/vimrc
+    ~/.vim: vim
+    ~/.bash_colors:
+      force: true
+      path: bash_colors
+    ~/.bashrc:
+      force: true
+      path: bashrc
+    ~/.gitconfig: gitconfig
+    ~/.ssh/config:
+        path: ssh/config
+        create: true
+    ~/.tmux.conf: tmux.conf
+    ~/src/python:
+        path: scripts/python
+        create: true
 
-- ssh:
+- shell:
   -
     command: [ssh-keygen -t rsa -N "" -f ~/.ssh/work, Installing ssh key for work]
-		stdin: true
-		stdout: true
-		stderr: true
+    stdin: true
+    stdout: true
+    stderr: true
   -
     command: [ssh-keygen -t rsa -N "" -f ~/.ssh/personal, Installing ssh key for work]
-		stdin: true
-		stdout: true
-		stderr: true
-	-
-		command: [vim +PluginInstall +qall now, Installing Vim plugins]
-		stdin: true
-		stdout: true
-		stderr: true
-	-
+    stdin: true
+    stdout: true
+    stderr: true
+  -
+    command: [vim +PluginInstall +qall now, Installing Vim plugins]
+    stdin: true
+    stdout: true
+    stderr: true
+  -
     command: [~/.dotfiles/fonts/install.sh, Installing fonts(Powerline, Nerd and more)]
     stdin: true
     stdout: true
     stderr: true
-	-
-    command: [gpg -c src/python/prokey.py.gpg, Decrypt prokey]
+  -
+    command: [gpg --output ~/src/python/prokey.py ~/src/python/prokey.py.gpg, Decrypt prokey]
     stdin: true
     stdout: true
     stderr: true
-	-
-    command: [gpg -c src/python/bgyeKey.py.gpg, Decrypt bgyeKey]
+  -
+    command: [gpg --output ~/src/python/bgyeKey.py ~/src/python/bgyeKey.py.gpg, Decrypt bgyeKey]
     stdin: true
     stdout: true
     stderr: true
