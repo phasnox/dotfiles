@@ -1,5 +1,16 @@
 - clean: ['~']
 
+- shell:
+  - [sleep 0, Installing dotfiles]
+  -
+    command: [git pull, Updating dotfiles]
+    stdout: true
+    stderr: true
+  -
+    command: [git submodule update --init --recursive --quiet, Installing submodules]
+    stdout: true
+    stderr: true
+
 - link:
   ~/.vimrc: vim/vimrc
   ~/.vim: vim
