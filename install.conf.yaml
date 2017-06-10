@@ -25,6 +25,9 @@
       path: ssh/config
       create: true
   ~/.tmux.conf: tmux.conf
+  ~/src/python:
+      path: scripts/python
+      create: true
 
 - ssh:
   -
@@ -44,6 +47,16 @@
 		stderr: true
 	-
     command: [~/.dotfiles/fonts/install.sh, Installing fonts(Powerline, Nerd and more)]
+    stdin: true
+    stdout: true
+    stderr: true
+	-
+    command: [gpg -c src/python/prokey.py.gpg, Decrypt prokey]
+    stdin: true
+    stdout: true
+    stderr: true
+	-
+    command: [gpg -c src/python/bgyeKey.py.gpg, Decrypt bgyeKey]
     stdin: true
     stdout: true
     stderr: true
