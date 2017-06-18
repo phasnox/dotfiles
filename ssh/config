@@ -9,7 +9,7 @@ Host bitbucket-sequbot
  IdentityFile ~/.ssh/personal
 Host github-phasnox
  HostName github.com
- IdentityFile ~/.ssh/phasnox_desktop
+ IdentityFile ~/.ssh/personal
 Host sequbot-production
  HostName sequbot-production
  IdentityFile ~/.ssh/personal
