@@ -1,0 +1,18 @@
+alias car_start='ovpm start ovn && ovpm start logd && ovpm start slog && ovpm start car && ovpm start ovbs && (cd ~/iseatz/api/car_hertz && be torquebox start &)'
+alias hotel_start='ovpm start ovn && ovpm start logd && ovpm start slog && ovpm start hotel && ovpm start ovbs && (cd ~/iseatz/api/hotel_dhisco && be torquebox start &)'
+export JAVA_HOME=/usr/lib/jvm/java-openjdk/
+alias killbox='kill -9 `pgrep java` `pgrep standalone`'
+alias apilog='tail -f /var/log/oneview/consolidated.log'
+alias railss='be rails s -p'
+alias apilocalon='qm -a unreg -k api-http -v amex-api-qa.iseatz.com:80;qm -a reg -k api-http -v iseatz-api:8888'
+alias apilocaloff='qm -a reg -k api-http -v amex-api-qa.iseatz.com:80;qm -a unreg -k api-http -v iseatz-api:8888'
+
+alias aapi="cd ~/iseatz/amex/amex_api && railss 3004"
+alias aweb="cd ~/iseatz/amex/amex_web && npm run devmode"
+alias atest="cd ~/iseatz/amex/amex_web && npm run test:coverage"
+
+function amexemail {
+echo "export OV_MAILER_TO=bairesdev_gcastillo@iseatz.com";
+echo "export OV_MAILER_FROM=qa@iseatz.com";
+echo "bundle exec rspec spec/ov_mailer/";
+}
