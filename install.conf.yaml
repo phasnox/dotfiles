@@ -14,6 +14,9 @@
 - link:
     ~/.vimrc: vim/vimrc
     ~/.vim: vim
+    ~/iseatz/z2/amex/update-all.sh:
+      force: true
+      path: work/update-all.sh
     ~/.bash_colors:
       force: true
       path: bash_colors
