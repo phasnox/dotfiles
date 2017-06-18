@@ -149,6 +149,8 @@ export PATH=$PATH:/home/phasnox/src/android/sdk/tools:/home/phasnox/src/android/
 export JAVA_HOME=/opt/jdk1.6.0_43/
 
 alias apt-get="sudo apt-get"
+alias dnf="sudo dnf"
+alias yum="sudo yum"
 alias gvim="gvim -geometry 500x500"
 
 alias tmux="env TERM=xterm-256color tmux"
@@ -163,8 +165,8 @@ alias bgyekey="python ~/src/python/bgyeKey.py"
 pythonaddmod() {
     mkdir $1 && touch "$1/__init__.py"
 }
-alias docker-rmi="docker rmi $(docker images --quiet --filter "dangling=true")"
-alias docker-rmc="docker rm $( docker ps -q -f status=exited)"
+#alias docker-rmi="docker rmi $(docker images --quiet --filter "dangling=true")"
+#alias docker-rmc="docker rm $( docker ps -q -f status=exited)"
 
 
 #=============
