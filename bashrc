@@ -182,3 +182,5 @@ alias iszapi='cd ~/src/iseatz/developer-setup && vagrant up api && vagrant ssh a
 alias iszamex='cd ~/src/iseatz/developer-setup && vagrant up amex && vagrant ssh amex'
 alias iszihg='cd ~/src/iseatz/developer-setup && vagrant up z2 && vagrant ssh z2'
 alias iszdb='psql -h 54.208.90.157 -U postgres simian_qa'
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

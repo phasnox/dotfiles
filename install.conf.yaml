@@ -13,7 +13,11 @@
 
 - link:
     ~/.vimrc: vim/vimrc
+		~/.config/nvim/init.vim:
+        path: vim/vimrc
+        create: true
     ~/.vim: vim
+    ~/.fzf: util/fzf
     ~/iseatz/z2/amex/update-all.sh:
       force: true
       path: work/update-all.sh
@@ -60,6 +64,11 @@
     stderr: true
   -
     command: [gpg --output ~/src/python/bgyeKey.py ~/src/python/bgyeKey.py.gpg, Decrypt bgyeKey]
+    stdin: true
+    stdout: true
+    stderr: true
+  -
+    command: [~/.fzf/install, Installing bash fuzzy completion]
     stdin: true
     stdout: true
     stderr: true

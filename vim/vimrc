@@ -16,7 +16,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'Townk/vim-autoclose'
 Plugin 'scrooloose/nerdtree'
 Plugin 'w0rp/ale'
-Plugin 'wincent/command-t'
+" Plugin 'wincent/command-t'
+Plugin 'kien/ctrlp.vim.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -120,7 +121,7 @@ noremap <leader>p :let @+=@%<CR>
 
 " FuzzySearch
 "noremap <F3> :FufCoverageFile<CR>
-map <F3> :CommandT<CR>
+map <F3> :CtrlP<CR>
 
 " Save shortcut all buffers
 noremap <F5> :wall<CR>
