@@ -35,9 +35,6 @@
     ~/iseatz/z2/amex/update-all.sh:
       force: true
       path: work/update-all.sh
-    ~/iseatz/z2/amex/userrc:
-      force: true
-      path: work/userrc
 
 - shell:
   -
@@ -72,6 +69,11 @@
     stderr: true
   -
     command: [~/.fzf/install, Installing bash fuzzy completion]
+    stdin: true
+    stdout: true
+    stderr: true
+  -
+    command: [cp ~/.dotfiles/work/userrc ~/iseatz/z2/amex, Installing bash fuzzy completion]
     stdin: true
     stdout: true
     stderr: true
