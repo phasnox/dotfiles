@@ -12,7 +12,11 @@ alias aweb="cd ~/iseatz/amex/amex_web && npm run devmode"
 alias atest="cd ~/iseatz/amex/amex_web && npm run test:coverage"
 
 function amexemail {
-echo "export OV_MAILER_TO=bairesdev_gcastillo@iseatz.com";
-echo "export OV_MAILER_FROM=qa@iseatz.com";
-echo "bundle exec rspec spec/ov_mailer/";
+    echo "export OV_MAILER_TO=bairesdev_gcastillo@iseatz.com";
+    echo "export OV_MAILER_FROM=qa@iseatz.com";
+    echo "bundle exec rspec spec/ov_mailer/";
+}
+
+function qmadd {
+    qm -a set -k $1 -v $2;
 }

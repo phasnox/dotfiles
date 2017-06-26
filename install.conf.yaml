@@ -18,9 +18,6 @@
         create: true
     ~/.vim: vim
     ~/.fzf: util/fzf
-    ~/iseatz/z2/amex/update-all.sh:
-      force: true
-      path: work/update-all.sh
     ~/.bash_colors:
       force: true
       path: bash_colors
@@ -35,6 +32,12 @@
     ~/src/python:
         path: scripts/python
         create: true
+    ~/iseatz/z2/amex/update-all.sh:
+      force: true
+      path: work/update-all.sh
+    ~/iseatz/z2/amex/userrc:
+      force: true
+      path: work/userrc
 
 - shell:
   -

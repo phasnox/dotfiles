@@ -5,7 +5,7 @@ snippet rxc
 	let mapStateToProps = ({}) => ({})
 	let mapDispatchToProps = dispatch => ({})
 	
-	export deafult connect(
+	export default connect(
 	  mapStateToProps,
 	  mapDispatchToProps
 	)(${0:{VISUAL}})
@@ -18,8 +18,8 @@ snippet rxd
 	})
 
 snippet map
-	${1:obj}.map(function (${2:index}, ${3:element}) {
-		${0:// callback}
+	${1:obj}.map((${2:element}, ${3:index}) => {
+	  ${0}
 	})
 snippet const
 	const ${1} = ${0}
@@ -32,6 +32,11 @@ snippet imas "import * as xyz from 'xyz'"
 snippet imm "import { member } from 'xyz'"
 	import { ${1} } from '${2}'
 
+snippet imgrid "import grid iseatz"
+	import Grid from 'ui'
+
+	let {Row, Column} = Grid
+
 # JSON.parse
 snippet jsonp
 	JSON.parse(${0:jstr})
@@ -43,3 +48,10 @@ snippet cl "console.log"
 
 snippet ie "lodash isEmpty"
 	isEmpty(${0})
+
+snippet izmq
+	import MediaQuery from 'react-responsive'
+	import utils from 'utils'
+	let {BREAKPOINTS} = utils.responsiveUtils
+	<MediaQuery query={BREAKPOINTS.SVP}>
+	</MediaQuery>
