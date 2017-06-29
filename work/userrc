@@ -20,3 +20,10 @@ function amexemail {
 function qmadd {
     qm -a set -k $1 -v $2;
 }
+
+function fixssl {
+    sudo yum update ca-certificates -y
+    sudo yum update nss -y
+    sudo update-ca-trust force-enable
+    sudo update-ca-trust extract
+}
