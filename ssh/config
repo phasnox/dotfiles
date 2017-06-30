@@ -13,3 +13,6 @@ Host github-phasnox
 Host sequbot-production
  HostName sequbot-production
  IdentityFile ~/.ssh/personal
+Host gurthang
+ HostName 192.168.1.177
+ IdentityFile ~/.ssh/personal

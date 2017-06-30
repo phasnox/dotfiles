@@ -1,11 +1,13 @@
 #!/usr/bin
 
 sudo dnf update
-sudo dnf install vim git dkms python
-sudo pip install powerline-status
+sudo dnf install vim git dkms python vim-X11 nodejs
+sudo pip install powerline-status jsbeautifier jsontool
+sudo npm install -g eslint
 
 # iSeatz stuff
 sudo dnf install nfs-utils nfs-utils-dev
+sudo dnf install vagrant VirtualBox
 systemctl enable nfs-server.service
 systemctl start nfs-server.service
 

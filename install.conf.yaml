@@ -13,7 +13,7 @@
 
 - link:
     ~/.vimrc: vim/vimrc
-		~/.config/nvim/init.vim:
+    ~/.config/nvim/init.vim:
         path: vim/vimrc
         create: true
     ~/.vim: vim
@@ -31,6 +31,9 @@
     ~/.tmux.conf: tmux.conf
     ~/src/python:
         path: scripts/python
+        create: true
+    ~/iseatz:
+        path: /srv/iseatz
         create: true
     ~/iseatz/z2/amex/update-all.sh:
       force: true
@@ -73,7 +76,7 @@
     stdout: true
     stderr: true
   -
-    command: [cp ~/.dotfiles/work/userrc ~/iseatz/z2/amex, Installing bash fuzzy completion]
+    command: [cp ~/.dotfiles/work/userrc ~/iseatz/z2/amex, Install userrc file for amex]
     stdin: true
     stdout: true
     stderr: true
