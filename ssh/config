@@ -16,3 +16,6 @@ Host sequbot-production
 Host glamdring
  HostName 192.168.1.177
  IdentityFile ~/.ssh/personal
+Host gurthang
+ HostName 192.168.1.77
+ IdentityFile ~/.ssh/personal
