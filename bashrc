@@ -159,7 +159,7 @@ alias tmux="env TERM=xterm-256color tmux"
 alias tm="env TERM=xterm-256color tmux new-session -c $(pwd)"
 alias tn="env TERM=xterm-256color tmux new-session"
 alias ta="env TERM=xterm-256color tmux attach"
-alias ubiqmine="~./bin/ethminer -F http://us.ubiqpool.io:8888/0x2A1ab9087EdcD43CeEe20C1EFDF39D670BBC0eea/om1 -G --farm-recheck 200"
+alias ubiqmine="~/Downloads/ethminer/bin/ethminer -F http://us.ubiqpool.io:8888/0x2A1ab9087EdcD43CeEe20C1EFDF39D670BBC0eea/om1 -G --farm-recheck 200"
 
 alias gitfixup="git commit -a --fixup HEAD && git rebase -i --autosquash HEAD~2"
 
@@ -170,6 +170,12 @@ pythonaddmod() {
 }
 #alias docker-rmi="docker rmi $(docker images --quiet --filter "dangling=true")"
 #alias docker-rmc="docker rm $( docker ps -q -f status=exited)"
+
+ssh-agent-start() {
+  eval $(ssh-agent)
+  ssh-add ~/.ssh/work
+  ssh-add ~/.ssh/personal
+}
 
 
 #=============
