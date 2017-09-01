@@ -159,7 +159,8 @@ alias tmux="env TERM=xterm-256color tmux"
 alias tm="env TERM=xterm-256color tmux new-session -c $(pwd)"
 alias tn="env TERM=xterm-256color tmux new-session"
 alias ta="env TERM=xterm-256color tmux attach"
-alias ubiqmine="~/Downloads/ethminer/bin/ethminer -F http://us.ubiqpool.io:8888/0x2A1ab9087EdcD43CeEe20C1EFDF39D670BBC0eea/om1 -G --farm-recheck 200"
+alias ubiqmine="~/Downloads/ethminer/bin/ethminer -F http://us.ubiqpool.io:8888/0x5c09b05e52f6d4031f1d0f0a54b52340546fa59f/om1 -G --farm-recheck 200"
+alias ethmine="~/Downloads/ethminer/bin/ethminer -F http://eth-us-east1.nanopool.org:8888/0xA8E43F40EF568B5BcC9Cfd2B8ED1173BcCd4a24E/grumpy/phasnox@gmail.com -G"
 
 alias gitfixup="git commit -a --fixup HEAD && git rebase -i --autosquash HEAD~2"
 

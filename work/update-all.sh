@@ -13,7 +13,7 @@ for D in *; do
     # Updates develop
     if [ -d "${D}" ]; then
         echo -e "${Green}Updating ${D}...${Color_Off}"
-        (cd ${D} && eval $stash_cmd && git fetch --all && git co $MASTER && git reset --hard origin/$MASTER)
+        (cd ${D} && eval $stash_cmd && git fetch --all && git checkout $MASTER && git reset --hard origin/$MASTER)
     fi
 
     # Updates master branch

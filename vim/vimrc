@@ -23,6 +23,8 @@ Plugin 'kien/ctrlp.vim.git'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tommcdo/vim-fubitive'
 "Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
