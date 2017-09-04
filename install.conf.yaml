@@ -33,6 +33,9 @@
     ~/src/python:
         path: scripts/python
         create: true
+    ~/iseatz:
+        path: /srv/iseatz
+        create: true
     ~/iseatz/z2/amex/update-all.sh:
       force: true
       path: work/update-all.sh
@@ -74,7 +77,7 @@
     stdout: true
     stderr: true
   -
-    command: [cp ~/.dotfiles/work/userrc ~/iseatz/z2/amex, Installing bash fuzzy completion]
+    command: [cp ~/.dotfiles/work/userrc ~/iseatz/z2/amex, Install userrc file for amex]
     stdin: true
     stdout: true
     stderr: true

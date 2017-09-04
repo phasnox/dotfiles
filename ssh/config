@@ -6,7 +6,7 @@ Host bitbucket-phasnox
  IdentityFile ~/.ssh/personal
 Host bitbucket-sequbot
  HostName bitbucket.org
- IdentityFile ~/.ssh/personal
+ IdentityFile ~/.ssh/sequbot
 Host github-phasnox
  HostName github.com
  IdentityFile ~/.ssh/personal
@@ -18,4 +18,7 @@ Host glamdring
  IdentityFile ~/.ssh/personal
 Host gurthang
  HostName 192.168.1.77
+ IdentityFile ~/.ssh/personal
+Host sequbot-production
+ HostName 104.154.140.75 
  IdentityFile ~/.ssh/personal

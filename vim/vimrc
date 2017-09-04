@@ -23,6 +23,8 @@ Plugin 'kien/ctrlp.vim.git'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tommcdo/vim-fubitive'
 "Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
@@ -175,6 +177,9 @@ set omnifunc=python3complete#Complete
 
 " format JSON
 map <Leader>j !python -m json.tool<CR>
+
+" format JSON
+map <Leader>js !js-beautify -s 2 --brace-style=expand -i<CR>
 
 map <C-n> :NERDTreeToggle<CR>
 map <Leader>f :NERDTreeFind<CR>
