@@ -144,6 +144,10 @@ alias beaglecon='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/nul 
 alias beagleupdate='scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/nul -r /home/phasnox/Dropbox/projects/planz/parko/src/backend/beaglebone/* root@192.168.7.2:parko'
 alias ifconfig='sudo ifconfig'
 alias swapfix='sudo swapoff -a && sudo swapon -a'
+alias chownme='sudo chown -R $USER:$USER .'
+alias docker='sudo docker'
+alias d='sudo docker'
+alias dc='sudo docker-compose'
 
 export PATH=$PATH:/home/phasnox/src/android/sdk/tools:/home/phasnox/src/android/sdk/platform-tools
 export JAVA_HOME=/opt/jdk1.6.0_43/
@@ -160,6 +164,7 @@ alias tm="env TERM=xterm-256color tmux new-session -c $(pwd)"
 alias tn="env TERM=xterm-256color tmux new-session"
 alias ta="env TERM=xterm-256color tmux attach"
 alias ubiqmine="~./bin/ethminer -F http://us.ubiqpool.io:8888/0x2A1ab9087EdcD43CeEe20C1EFDF39D670BBC0eea/om1 -G --farm-recheck 200"
+alias fixtouchpad="sudo rmmod hid_rmi && sudo modprobe hid_rmi"
 
 alias gitfixup="git commit -a --fixup HEAD && git rebase -i --autosquash HEAD~2"
 
