@@ -183,6 +183,12 @@ ssh-agent-start() {
   ssh-add ~/.ssh/personal
 }
 
+# Sequbot
+alias sequbot="(cd ~/src/sequbot/sequbot_data && docker-compose up -d) &&(cd ~/src/sequbot/sequbot_ai && docker-compose up -d)"
+alias sbdb="cd ~/src/sequbot/sequbot_data && docker exec -it sequbot-database bash"
+alias sbshell="cd ~/src/sequbot/sequbot_ai && docker exec -it sequbotai_node_1 bash"
+alias zecminer="cd ~/Downloads/zecminer/0.3.4b/ && ./miner"
+
 
 #=============
 # iSeatz stuff
