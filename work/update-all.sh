@@ -1,5 +1,5 @@
 #!/bin/bash
-MASTER="hotel_redesign"
+MASTER="master"
 BB="hotel_redesign"
 while true; do
     read -p "Stash? " yn
