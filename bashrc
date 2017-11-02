@@ -144,6 +144,10 @@ alias beaglecon='ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/nul 
 alias beagleupdate='scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/nul -r /home/phasnox/Dropbox/projects/planz/parko/src/backend/beaglebone/* root@192.168.7.2:parko'
 alias ifconfig='sudo ifconfig'
 alias swapfix='sudo swapoff -a && sudo swapon -a'
+alias chownme='sudo chown -R $USER:$USER .'
+alias docker='sudo docker'
+alias d='sudo docker'
+alias dc='sudo docker-compose'
 
 export PATH=$PATH:/home/phasnox/src/android/sdk/tools:/home/phasnox/src/android/sdk/platform-tools
 export JAVA_HOME=/opt/jdk1.6.0_43/
@@ -159,6 +163,7 @@ alias tmux="env TERM=xterm-256color tmux"
 alias tm="env TERM=xterm-256color tmux new-session -c $(pwd)"
 alias tn="env TERM=xterm-256color tmux new-session"
 alias ta="env TERM=xterm-256color tmux attach"
+alias fixtouchpad="sudo rmmod hid_rmi && sudo modprobe hid_rmi"
 alias ubiqmine="~/Downloads/ethminer/bin/ethminer -F http://us.ubiqpool.io:8888/0x5c09b05e52f6d4031f1d0f0a54b52340546fa59f/om1 -G --farm-recheck 200"
 alias ethmine="~/Downloads/ethminer/bin/ethminer -F http://eth-us-east1.nanopool.org:8888/0xA8E43F40EF568B5BcC9Cfd2B8ED1173BcCd4a24E/grumpy/phasnox@gmail.com -G"
 

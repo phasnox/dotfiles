@@ -1,6 +1,7 @@
 #!/bin/bash
 MASTER="hotel_redesign"
 BB="HPO_MLP"
+
 while true; do
     read -p "Stash? " yn
     case ${yn} in

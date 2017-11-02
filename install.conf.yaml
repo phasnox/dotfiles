@@ -16,6 +16,7 @@
     ~/.config/nvim/init.vim:
         path: vim/vimrc
         create: true
+    ~/.config/redshift.conf: redshift.conf
     ~/.vim: vim
     ~/.fzf: util/fzf
     ~/.bash_colors:
