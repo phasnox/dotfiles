@@ -1,6 +1,6 @@
 #!/bin/bash
 MASTER="hotel_redesign"
-BB="hotel_redesign"
+BB="HPO_MLP"
 while true; do
     read -p "Stash? " yn
     case ${yn} in
@@ -25,7 +25,7 @@ done
 
 
 # Updates sub-branch
-for D in ovc amex_ovc cms ovlinks pbr; do
+for D in amex_web amex_api; do
     echo -e "${Green}Updating $BB for ${D}...${Color_Off}"
     (cd ${D} && git checkout $BB && git fetch --all && git pull origin $BB)
 done
