@@ -1,6 +1,9 @@
 #!/bin/bash
-MASTER="hotel_redesign"
-BB="HPO_MLP"
+MASTER="master"
+#MASTER="develop"
+#MASTER="release/18.4"
+#MASTER="air_responsive"
+#BB="mlp_fhrthc"
 
 while true; do
     read -p "Stash? " yn
@@ -26,7 +29,7 @@ done
 
 
 # Updates sub-branch
-for D in amex_web amex_api; do
-    echo -e "${Green}Updating $BB for ${D}...${Color_Off}"
-    (cd ${D} && git checkout $BB && git fetch --all && git pull origin $BB)
-done
+#for D in amex_web amex_api cms cms_admin amex_ovc; do
+#    echo -e "${Green}Updating $BB for ${D}...${Color_Off}"
+#    (cd ${D} && git checkout $BB && git fetch --all && git pull origin $BB)
+#done

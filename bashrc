@@ -177,7 +177,8 @@ pythonaddmod() {
 #alias docker-rmi="docker rmi $(docker images --quiet --filter "dangling=true")"
 #alias docker-rmc="docker rm $( docker ps -q -f status=exited)"
 
-ssh-agent-start() {
+# Ssh Agent start
+sas() {
   eval $(ssh-agent)
   ssh-add ~/.ssh/work
   ssh-add ~/.ssh/personal
@@ -189,6 +190,10 @@ alias sbdb="cd ~/src/sequbot/sequbot_data && docker exec -it sequbot-database ba
 alias sbshell="cd ~/src/sequbot/sequbot_ai && docker exec -it sequbotai_node_1 bash"
 alias sbcom="ssh root@sequbot.com"
 alias zecminer="cd ~/Downloads/zecminer/0.3.4b/ && ./miner"
+
+gpush() {
+    git push origin $(git rev-parse --abbrev-ref HEAD)
+}
 
 
 #=============
@@ -204,5 +209,6 @@ alias iszapi='cd ~/src/iseatz/developer-setup && vagrant up api && vagrant ssh a
 alias iszamex='cd ~/src/iseatz/developer-setup && vagrant up amex && vagrant ssh amex'
 alias iszihg='cd ~/src/iseatz/developer-setup && vagrant up z2 && vagrant ssh z2'
 alias iszdb='psql -h 54.208.90.157 -U postgres simian_qa'
+alias iszupdate='cd ~/iseatz/z2/amex && ./update-all.sh'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

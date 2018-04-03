@@ -6,10 +6,15 @@ alias apilog='tail -f /var/log/oneview/consolidated.log'
 alias railss='be rails s -p'
 alias apilocalon='qm -a unreg -k api-http -v amex-api-qa.iseatz.com:80;qm -a reg -k api-http -v iseatz-api:8888'
 alias apilocaloff='qm -a reg -k api-http -v amex-api-qa.iseatz.com:80;qm -a unreg -k api-http -v iseatz-api:8888'
+alias apiqa1='qm -a reg -k api-http -v amex-api-qa.iseatz.com:80;qm -a unreg -k api-http -v api-qa2.iseatz.com:80'
+alias apiqa2='qm -a unreg -k api-http -v amex-api-qa.iseatz.com:80;qm -a reg -k api-http -v api-qa2.iseatz.com:80'
 
 alias aapi="cd ~/iseatz/amex/amex_api && railss 3004"
 alias aweb="cd ~/iseatz/amex/amex_web && npm run devmode"
 alias atest="cd ~/iseatz/amex/amex_web && npm run test:coverage"
+alias amex="cd ~/iseatz/amex/amex && be rails s -p 3001"
+alias cmsadmin="cd ~/iseatz/amex/cms_admin && be rails s -p 3001"
+alias ovlinks="cd ~/iseatz/amex/ovlinks && npm start"
 
 function amexemail {
     echo "export OV_MAILER_TO=bairesdev_gcastillo@iseatz.com";
@@ -26,4 +31,29 @@ function fixssl {
     sudo yum update nss -y
     sudo update-ca-trust force-enable
     sudo update-ca-trust extract
+}
+
+function mlpload {
+  bundle exec rake landing_pages:management:load['american_express','hotel_offer',${1}]
+  bundle exec rake landing_pages:management:set_live['american_express','hotel_offer',${1},${2}]
+  echo ""
+  echo "Rake tasks:"
+  echo "{code}"
+  echo "bundle exec rake landing_pages:management:load['american_express','hotel_offer',${1}]"
+  echo "bundle exec rake landing_pages:management:set_live['american_express','hotel_offer',${1},${2}]"
+  echo "{code}"
+  echo ""
+  echo "Go to: http://amex-local-dev.iseatz.com:3000/hotel-offers/${1}?preview_auth_token=TBD&version=${2}"
+}
+
+function amexcms {
+  bundle exec rake 'amex:featured_hotels:load_featured_hotels[featureddisplay]'
+  bundle exec rake 'amex:featured_hotels:load_featured_hotels[specialoffers]'
+  echo ""
+  echo "Rake tasks:"
+  echo "{code}"
+  echo "bundle exec rake 'amex:featured_hotels:load_featured_hotels[featureddisplay]'"
+  echo "bundle exec rake 'amex:featured_hotels:load_featured_hotels[specialoffers]'"
+  echo "{code}"
+  echo ""
 }
