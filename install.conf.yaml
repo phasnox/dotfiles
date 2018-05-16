@@ -19,12 +19,21 @@
     ~/.config/redshift.conf: redshift.conf
     ~/.vim: vim
     ~/.fzf: util/fzf
-    ~/.bash_colors:
+    ~/.command_colors:
       force: true
-      path: bash_colors
+      path: command_colors
+    ~/.command_aliases:
+      force: true
+      path: command_aliases
+    ~/.command_symbols:
+      force: true
+      path: command_symbols
     ~/.bashrc:
       force: true
       path: bashrc
+    ~/.zsh:
+      force: true
+      path: zsh
     ~/.gitconfig: gitconfig
     ~/.ssh/config:
         path: ssh/config
