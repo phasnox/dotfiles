@@ -4,6 +4,7 @@
 [alias]
 	co = checkout
 	coa = checkout AXPT-
+	cm = commit -am
 [diff]
 	tool = gvimdiff
 [core]

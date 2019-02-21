@@ -1,7 +1,7 @@
 #!/bin/bash
-MASTER="master"
+#MASTER="master"
 #MASTER="develop"
-#MASTER="release/18.4"
+MASTER="release/18.25"
 #MASTER="air_responsive"
 #BB="mlp_fhrthc"
 

@@ -33,12 +33,14 @@ alias sbshell="cd ~/src/sequbot/sequbot_ai && docker exec -it sequbotai_node_1 b
 alias sbcom="ssh root@sequbot.com"
 alias zecminer="cd ~/Downloads/zecminer/0.3.4b/ && ./miner"
 # iSeatz stuff
+alias cdwh="cd ~/src/iseatz/wyndham/"
 alias iszvpn='(cd /home/phasnox/Dropbox/bairesdev/ && sudo openvpn --config bairesdev_gcastillo-zephyr-config.ovpn)'
 alias iszapi='cd ~/src/iseatz/developer-setup && vagrant up api && vagrant ssh api'
 alias iszamex='cd ~/src/iseatz/developer-setup && vagrant up amex && vagrant ssh amex'
 alias iszihg='cd ~/src/iseatz/developer-setup && vagrant up z2 && vagrant ssh z2'
 alias iszdb='psql -h 54.208.90.157 -U postgres simian_qa'
 alias iszupdate='cd ~/iseatz/z2/amex && ./update-all.sh'
+alias iszmolecularupdate="(cd ~/src/iseatz/wyndham/molecular-components/ && yarn build && cp -r packages/ams-activities/dist ~/src/iseatz/wyndham/wyndham_web/node_modules/@iseatz/ams-activities/ && cp -r packages/ams-core/dist ~/src/iseatz/wyndham/wyndham_web/node_modules/@iseatz/ams-core/)"
 
 pythonaddmod() {
     mkdir $1 && touch "$1/__init__.py"
