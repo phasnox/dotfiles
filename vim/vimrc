@@ -18,8 +18,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'w0rp/ale'
 " Plugin 'wincent/command-t'
 Plugin 'kien/ctrlp.vim.git'
-
-" Vim snippets
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
@@ -27,6 +25,9 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tommcdo/vim-fubitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'sjl/gundo'
 "Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
@@ -41,9 +42,8 @@ autocmd! bufwritepost ~/.vimrc source %
 
 " jk is escape
 inoremap jk <esc>
-
-" Shows cursor line
-set cursorline
+map <F1> <Esc>
+imap <F1> <Esc>
 
 let mapleader=","
 syntax on
@@ -111,7 +111,7 @@ autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 " File type definitions
-autocmd BufNewFile,BufRead *.json,*.jsx,*.babelrc set ft=javascript
+"autocmd BufNewFile,BufRead *.json,*.jsx,*.babelrc set ft=javascript
 
 " Filetype tabs
 " ==================================
@@ -145,13 +145,6 @@ map <c-h> <c-w>h
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
-
-" Manejo del size de los splits
-map <C-S-Right> <C-W>>
-map <C-S-Left> <C-W><
-map <C-S-Up> <C-w>+
-map <C-S-Down> <C-w>-
-map <F9> <C-W>=
 
 
 " Semicolon shortcut
@@ -197,12 +190,6 @@ let NERDTreeIgnore = ['\.pyc$', '__pycache__', 'node_modules']
 
 " Clear search highlights
 noremap <silent><Leader>/ :nohls<CR
-
-" Turn off arrow keys in normal mode
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
 
 " Turn off search hilghlights
 noremap <silent><Leader>/ :nohls<CR

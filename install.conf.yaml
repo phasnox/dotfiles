@@ -16,7 +16,9 @@
     ~/.config/nvim/init.vim:
         path: vim/vimrc
         create: true
-    ~/.config/redshift.conf: redshift.conf
+    ~/.config/nvim/colors:
+        path: vim/colors
+        create: true
     ~/.vim: vim
     ~/.fzf: util/fzf
     ~/.command_colors:
@@ -34,6 +36,9 @@
     ~/.zsh:
       force: true
       path: zsh
+    ~/.oh-my-zsh/themes/phasnox.zsh-theme:
+      force: true
+      path: zsh/themes/phasnox.zsh-theme
     ~/.gitconfig: gitconfig
     ~/.ssh/config:
         path: ssh/config
@@ -61,7 +66,7 @@
     stdout: true
     stderr: true
   -
-    command: [vim +PluginInstall +qall now, Installing Vim plugins]
+    command: [nvim +PluginInstall +qall now, Installing Vim plugins]
     stdin: true
     stdout: true
     stderr: true
@@ -87,6 +92,16 @@
     stderr: true
   -
     command: [cp ~/.dotfiles/work/userrc ~/iseatz/z2/amex, Install userrc file for amex]
+    stdin: true
+    stdout: true
+    stderr: true
+  -
+    command: ['sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"', Install omzsh]
+    stdin: true
+    stdout: true
+    stderr: true
+  -
+    command: ['git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim', Install vundle]
     stdin: true
     stdout: true
     stderr: true

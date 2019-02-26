@@ -1,6 +1,6 @@
 source ~/.command_aliases
 source ~/.command_colors
-source ~/.commnd_symbols
+source ~/.command_symbols
 source /usr/share/git-core/contrib/completion/git-prompt.sh
 
 # for examples
