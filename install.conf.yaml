@@ -33,6 +33,9 @@
     ~/.bashrc:
       force: true
       path: bashrc
+    ~/.zshrc:
+      force: true
+      path: zshrc
     ~/.zsh:
       force: true
       path: zsh
