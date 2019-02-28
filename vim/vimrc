@@ -104,7 +104,7 @@ endif
 set foldmethod=syntax
 set foldlevelstart=2
 autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview 
+autocmd BufWinEnter *.* silent! loadview 
 
 "Autoclose comment buffer
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif

@@ -108,3 +108,8 @@
     stdin: true
     stdout: true
     stderr: true
+  -
+    command: ['git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm', Install nvm]
+    stdin: true
+    stdout: true
+    stderr: true
