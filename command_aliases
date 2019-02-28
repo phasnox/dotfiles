@@ -33,7 +33,7 @@ alias sbshell="cd ~/src/sequbot/sequbot_ai && docker exec -it sequbotai_node_1 b
 alias sbcom="ssh root@sequbot.com"
 alias zecminer="cd ~/Downloads/zecminer/0.3.4b/ && ./miner"
 # iSeatz stuff
-alias cdwh="cd ~/src/iseatz/wyndham/"
+alias cdams="cd ~/src/iseatz/ams/"
 alias iszvpn='(cd /home/phasnox/Dropbox/bairesdev/ && sudo openvpn --config bairesdev_gcastillo-zephyr-config.ovpn)'
 alias iszapi='cd ~/src/iseatz/developer-setup && vagrant up api && vagrant ssh api'
 alias iszamex='cd ~/src/iseatz/developer-setup && vagrant up amex && vagrant ssh amex'
