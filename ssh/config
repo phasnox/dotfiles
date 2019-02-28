@@ -1,24 +1,16 @@
+AddKeysToAgent  yes
 Host bitbucket-iseatz
  HostName bitbucket.org
  IdentityFile ~/.ssh/work
 Host bitbucket-phasnox
  HostName bitbucket.org
  IdentityFile ~/.ssh/personal
-Host bitbucket-sequbot
- HostName bitbucket.org
- IdentityFile ~/.ssh/sequbot
 Host github-phasnox
  HostName github.com
- IdentityFile ~/.ssh/personal
-Host sequbot-production
- HostName sequbot-production
  IdentityFile ~/.ssh/personal
 Host glamdring
  HostName 192.168.1.177
  IdentityFile ~/.ssh/personal
 Host gurthang
  HostName 192.168.1.77
- IdentityFile ~/.ssh/personal
-Host sequbot-production
- HostName 104.154.140.75 
  IdentityFile ~/.ssh/personal
