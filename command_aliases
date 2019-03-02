@@ -9,6 +9,7 @@ alias chownme='sudo chown -R $USER:$USER .'
 alias docker='sudo docker'
 alias d='sudo docker'
 alias dc='sudo docker-compose'
+alias pacman="sudo pacman"
 alias apt-get="sudo apt-get"
 alias dnf="sudo dnf"
 alias yum="sudo yum"
@@ -40,7 +41,7 @@ alias iszamex='cd ~/src/iseatz/developer-setup && vagrant up amex && vagrant ssh
 alias iszihg='cd ~/src/iseatz/developer-setup && vagrant up z2 && vagrant ssh z2'
 alias iszdb='psql -h 54.208.90.157 -U postgres simian_qa'
 alias iszupdate='cd ~/iseatz/z2/amex && ./update-all.sh'
-alias iszmolecularupdate="(cd ~/src/iseatz/wyndham/molecular-components/ && yarn build && cp -r packages/ams-activities/dist ~/src/iseatz/wyndham/wyndham_web/node_modules/@iseatz/ams-activities/ && cp -r packages/ams-core/dist ~/src/iseatz/wyndham/wyndham_web/node_modules/@iseatz/ams-core/)"
+alias iszmolecularupdate="(cd ~/src/iseatz/ams/molecular-components/ && yarn build && cp -r packages/ams-activities/dist ~/src/iseatz/ams/wyndham_web/node_modules/@iseatz/ams-activities/ && cp -r packages/ams-core/dist ~/src/iseatz/ams/wyndham_web/node_modules/@iseatz/ams-core/)"
 
 pythonaddmod() {
     mkdir $1 && touch "$1/__init__.py"

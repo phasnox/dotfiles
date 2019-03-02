@@ -25,9 +25,10 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tommcdo/vim-fubitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-abolish'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
-Plugin 'sjl/gundo'
+Plugin 'sjl/gundo.vim'
 "Plugin 'honza/vim-snippets'
 
 " All of your Plugins must be added before the following line
