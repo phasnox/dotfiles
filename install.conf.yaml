@@ -33,15 +33,6 @@
     ~/.bashrc:
       force: true
       path: bashrc
-    ~/.zshrc:
-      force: true
-      path: zshrc
-    ~/.zsh:
-      force: true
-      path: zsh
-    ~/.oh-my-zsh/themes/phasnox.zsh-theme:
-      force: true
-      path: zsh/themes/phasnox.zsh-theme
     ~/.gitconfig: gitconfig
     ~/.ssh/config:
         path: ssh/config
@@ -113,3 +104,13 @@
     stdin: true
     stdout: true
     stderr: true
+- link:
+    ~/.zshrc:
+      force: true
+      path: zshrc
+    ~/.zsh:
+      force: true
+      path: zsh
+    ~/.oh-my-zsh/themes/phasnox.zsh-theme:
+      force: true
+      path: zsh/themes/phasnox.zsh-theme
