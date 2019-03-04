@@ -104,7 +104,15 @@
     stdin: true
     stdout: true
     stderr: true
+  -
+    command: ['pip install --user git+git://github.com/powerline/powerline', Install powerline]
+    stdin: true
+    stdout: true
+    stderr: true
 - link:
+    ~/.powerline.conf:
+      force: true
+      path: powerline.conf
     ~/.zshrc:
       force: true
       path: zshrc
