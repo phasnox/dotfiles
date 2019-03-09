@@ -50,12 +50,6 @@
     ~/src/python:
         path: scripts/python
         create: true
-    ~/iseatz:
-        path: /srv/iseatz
-        create: true
-    ~/iseatz/z2/amex/update-all.sh:
-      force: true
-      path: work/update-all.sh
 
 - shell:
   -

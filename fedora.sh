@@ -21,3 +21,6 @@ firewall-cmd --permanent --add-port=42955/tcp
 firewall-cmd --permanent --add-port=875/tcp
 
 firewall-cmd --reload
+
+# Needed for virtualbox nfs to work 
+ln -sf ~/iseatz: /srv/iseatz
