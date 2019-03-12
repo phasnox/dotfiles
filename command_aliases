@@ -9,6 +9,7 @@ alias chownme='sudo chown -R $USER:$USER .'
 alias docker='sudo docker'
 alias d='sudo docker'
 alias dc='sudo docker-compose'
+alias zypper="sudo zypper"
 alias pacman="sudo pacman"
 alias apt-get="sudo apt-get"
 alias dnf="sudo dnf"
