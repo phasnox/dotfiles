@@ -80,6 +80,11 @@
     stdout: true
     stderr: true
   -
+    command: [gpg --output ~/.npmrc ~/npmrc.gpg, Decrypt npmrc]
+    stdin: true
+    stdout: true
+    stderr: true
+  -
     command: [~/.fzf/install, Installing bash fuzzy completion]
     stdin: true
     stdout: true
