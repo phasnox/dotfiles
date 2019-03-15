@@ -22,18 +22,10 @@ alias tm="env TERM=xterm-256color tmux new-session -c $(pwd)"
 alias tn="env TERM=xterm-256color tmux new-session"
 alias ta="env TERM=xterm-256color tmux attach"
 alias fixtouchpad="sudo rmmod hid_rmi && sudo modprobe hid_rmi"
-alias ubiqmine="~/Downloads/ethminer/bin/ethminer -F http://us.ubiqpool.io:8888/0x5c09b05e52f6d4031f1d0f0a54b52340546fa59f/om1 -G --farm-recheck 200"
-alias ethmine="~/Downloads/ethminer/bin/ethminer -F http://eth-us-east1.nanopool.org:8888/0xA8E43F40EF568B5BcC9Cfd2B8ED1173BcCd4a24E/grumpy/phasnox@gmail.com -G"
 alias gitfixup="git commit -a --fixup HEAD && git rebase -i --autosquash HEAD~2"
 alias prokey="python ~/src/python/prokey.py"
 alias bgyekey="python ~/src/python/bgyeKey.py"
 
-# Sequbot
-alias sequbot="(cd ~/src/sequbot/sequbot_data && docker-compose up -d) &&(cd ~/src/sequbot/sequbot_ai && docker-compose up -d)"
-alias sbdb="cd ~/src/sequbot/sequbot_data && docker exec -it sequbot-database bash"
-alias sbshell="cd ~/src/sequbot/sequbot_ai && docker exec -it sequbotai_node_1 bash"
-alias sbcom="ssh root@sequbot.com"
-alias zecminer="cd ~/Downloads/zecminer/0.3.4b/ && ./miner"
 # iSeatz stuff
 alias cdams="cd ~/src/iseatz/ams/"
 alias iszvpn='(cd /home/phasnox/Dropbox/bairesdev/ && sudo openvpn --config bairesdev_gcastillo-zephyr-config.ovpn)'
@@ -43,6 +35,7 @@ alias iszihg='cd ~/src/iseatz/developer-setup && vagrant up z2 && vagrant ssh z2
 alias iszdb='psql -h 54.208.90.157 -U postgres simian_qa'
 alias iszupdate='cd ~/iseatz/z2/amex && ./update-all.sh'
 alias iszmolecularupdate="(cd ~/src/iseatz/ams/molecular-components/ && yarn build && cp -r packages/ams-activities/dist ~/src/iseatz/ams/wyndham_web/node_modules/@iseatz/ams-activities/ && cp -r packages/ams-core/dist ~/src/iseatz/ams/wyndham_web/node_modules/@iseatz/ams-core/)"
+alias yall='yarn install && yarn && yarn build && yarn start'
 
 pythonaddmod() {
     mkdir $1 && touch "$1/__init__.py"
@@ -61,4 +54,15 @@ gpush() {
 
 coa() {
     git co AXPT-$1
+}
+
+git-update-all() {
+    CURRENT_BRANCH=${1:-${WORK_MASTER:-master}}
+    for D in *; do
+        # Updates develop
+        if [ -d "${D}" ]; then
+            echo -e "${Green}Updating ${D}...${Color_Off}"
+            (cd ${D} && git fetch --all && git checkout $CURRENT_BRANCH && git reset --hard origin/$CURRENT_BRANCH)
+        fi
+    done
 }

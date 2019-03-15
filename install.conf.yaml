@@ -41,12 +41,6 @@
     ~/src/python:
         path: scripts/python
         create: true
-    ~/iseatz:
-        path: /srv/iseatz
-        create: true
-    ~/iseatz/z2/amex/update-all.sh:
-      force: true
-      path: work/update-all.sh
 
 - shell:
   -
@@ -110,7 +104,7 @@
     stdout: true
     stderr: true
   -
-    command: ['pip install --user git+git://github.com/powerline/powerline', Install powerline]
+    command: ['pip install powerline-status', Install powerline]
     stdin: true
     stdout: true
     stderr: true
