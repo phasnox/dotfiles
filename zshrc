@@ -102,4 +102,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 eval $(keychain --eval --quiet personal work)
 source ~/.command_aliases
+export FZF_DEFAULT_COMMAND='ag -l'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+_fzf_compgen_path() {
+  ag -l
+}
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Set vi mode
+#set -o vi

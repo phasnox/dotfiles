@@ -49,7 +49,7 @@ sas() {
 }
 
 gpush() {
-    git push origin $(git rev-parse --abbrev-ref HEAD)
+    git push $1 origin $(git rev-parse --abbrev-ref HEAD)
 }
 
 coa() {

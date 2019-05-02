@@ -27,6 +27,7 @@ function qmadd {
 }
 
 function fixssl {
+    sudo sed -i "s/mirrorlist=https/mirrorlist=http/" /etc/yum.repos.d/epel.repo
     sudo yum update ca-certificates -y
     sudo yum update nss -y
     sudo update-ca-trust force-enable
