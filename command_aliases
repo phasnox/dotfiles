@@ -25,6 +25,7 @@ alias fixtouchpad="sudo rmmod hid_rmi && sudo modprobe hid_rmi"
 alias gitfixup="git commit -a --fixup HEAD && git rebase -i --autosquash HEAD~2"
 alias prokey="python ~/src/python/prokey.py"
 alias bgyekey="python ~/src/python/bgyeKey.py"
+alias mountglamdring="sudo mount -t nfs -o vers=4 glamdring:/home/phasnox/iseatz/z2 ~/remote/glamdring/iseatz"
 
 # iSeatz stuff
 alias cdams="cd ~/src/iseatz/ams/"
