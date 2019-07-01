@@ -111,3 +111,5 @@ _fzf_compgen_path() {
 
 # Set vi mode
 #set -o vi
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

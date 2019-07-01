@@ -54,17 +54,7 @@
     stdout: true
     stderr: true
   -
-    command: [nvim +PluginInstall +qall now, Installing Vim plugins]
-    stdin: true
-    stdout: true
-    stderr: true
-  -
     command: [~/.dotfiles/fonts/install.sh, Installing fonts(Powerline, Nerd and more)]
-    stdin: true
-    stdout: true
-    stderr: true
-  -
-    command: [gpg --output ~/src/python/prokey.py ~/src/python/prokey.py.gpg, Decrypt prokey]
     stdin: true
     stdout: true
     stderr: true
@@ -94,7 +84,12 @@
     stdout: true
     stderr: true
   -
-    command: ['git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim', Install vundle]
+    command: ['curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim', Install vim-plug vim]
+    stdin: true
+    stdout: true
+    stderr: true
+  -
+    command: ['curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim', Install vim-plug nvim]
     stdin: true
     stdout: true
     stderr: true
