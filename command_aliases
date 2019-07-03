@@ -49,10 +49,6 @@ sas() {
   ssh-add ~/.ssh/personal
 }
 
-gpush() {
-    git push $1 origin $(git rev-parse --abbrev-ref HEAD)
-}
-
 coa() {
     git co AXPT-$1
 }

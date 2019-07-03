@@ -1,5 +1,7 @@
 vim/.netrwhist
 vim/view/
 vim/bundle/
+vim/autoload/
+vim/plugged/
 scripts/python/bgyeKey.py
-scripts/python/proKey.py
+scripts/python/prokey.py

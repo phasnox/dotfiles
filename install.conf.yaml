@@ -41,6 +41,12 @@
     ~/src/python:
         path: scripts/python
         create: true
+    ~/.powerline.conf:
+      force: true
+      path: powerline.conf
+    ~/.zshrc:
+      force: true
+      path: zshrc
 
 - shell:
   -
@@ -79,11 +85,6 @@
     stdout: true
     stderr: true
   -
-    command: ['sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"', Install omzsh]
-    stdin: true
-    stdout: true
-    stderr: true
-  -
     command: ['curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim', Install vim-plug vim]
     stdin: true
     stdout: true
@@ -94,25 +95,17 @@
     stdout: true
     stderr: true
   -
-    command: ['git clone https://github.com/lukechilds/zsh-nvm ~/.oh-my-zsh/custom/plugins/zsh-nvm', Install nvm]
-    stdin: true
-    stdout: true
-    stderr: true
-  -
     command: ['pip install powerline-status', Install powerline]
     stdin: true
     stdout: true
     stderr: true
-- link:
-    ~/.powerline.conf:
-      force: true
-      path: powerline.conf
-    ~/.zshrc:
-      force: true
-      path: zshrc
-    ~/.zsh:
-      force: true
-      path: zsh
-    ~/.oh-my-zsh/themes/phasnox.zsh-theme:
-      force: true
-      path: zsh/themes/phasnox.zsh-theme
+  -
+    command: ['curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim', Install vim-plug nvim]
+    stdin: true
+    stdout: true
+    stderr: true
+  -
+    command: ['antibody bundle < ~/.dotfiles/zsh/zsh_plugins.txt > ~/.dotfiles/zsh/zsh_plugins.sh', Install antibody plugins]
+    stdin: true
+    stdout: true
+    stderr: true
