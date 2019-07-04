@@ -12,6 +12,9 @@
     stderr: true
 
 - link:
+    ~/.config/fish/config.fish:
+        path: fish/config.fish
+        create: true
     ~/.vimrc: vim/vimrc
     ~/.config/nvim/init.vim:
         path: vim/vimrc
@@ -75,7 +78,7 @@
     stdout: true
     stderr: true
   -
-    command: [~/.fzf/install, Installing bash fuzzy completion]
+    command: [~/.fzf/install, Installing cmd fuzzy completion]
     stdin: true
     stdout: true
     stderr: true
@@ -106,6 +109,21 @@
     stderr: true
   -
     command: ['antibody bundle < ~/.dotfiles/zsh/zsh_plugins.txt > ~/.dotfiles/zsh/zsh_plugins.sh', Install antibody plugins]
+    stdin: true
+    stdout: true
+    stderr: true
+  -
+    command: ['curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish', Install fisher]
+    stdin: true
+    stdout: true
+    stderr: true
+  -
+    command: ['fisher add jorgebucaran/fish-nvm matchai/spacefish jethrokuan/fzf danhper/fish-ssh-agent', Install fisher plugins]
+    stdin: true
+    stdout: true
+    stderr: true
+  -
+    command: ['chsh -s /usr/bin/fish', Make fish the default shell]
     stdin: true
     stdout: true
     stderr: true
