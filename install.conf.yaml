@@ -118,12 +118,17 @@
     stdout: true
     stderr: true
   -
-    command: ['fisher add jorgebucaran/fish-nvm matchai/spacefish jethrokuan/fzf danhper/fish-ssh-agent', Install fisher plugins]
+    command: ['fisher add matchai/spacefish jethrokuan/fzf danhper/fish-ssh-agent', Install fisher plugins]
     stdin: true
     stdout: true
     stderr: true
   -
     command: ['chsh -s /usr/bin/fish', Make fish the default shell]
+    stdin: true
+    stdout: true
+    stderr: true
+  -
+    command: ['curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash', Install nvm]
     stdin: true
     stdout: true
     stderr: true

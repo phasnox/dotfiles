@@ -7,13 +7,14 @@ alias pacman "sudo pacman"
 alias apt-get "sudo apt-get"
 alias dnf "sudo dnf"
 alias yum "sudo yum"
+alias nmcli "sudo nmcli"
 
 alias vim nvim
 alias tmux "env TERM=xterm-256color tmux"
-alias tm="env TERM=xterm-256color tmux new-session -c (pwd)"
+alias tm "env TERM=xterm-256color tmux new-session -c (pwd)"
 alias tn "env TERM=xterm-256color tmux new-session"
-alias ta="env TERM=xterm-256color tmux attach"
-alias gitfixup "git commit -a --fixup HEAD && git rebase -i --autosquash HEAD~2"
+alias ta "env TERM=xterm-256color tmux attach"
+alias gitfixup "git commit --no-verify -a --fixup HEAD && git rebase -i --autosquash HEAD~2"
 alias bgyekey "python ~/src/python/bgyeKey.py"
 
 # iSeatz stuff
@@ -26,8 +27,8 @@ alias yall "yarn install && yarn && yarn build && yarn start"
 
 function git-update-all
     set CURRENT_BRANCH $argv
-    or set CURRENT_BRANCH $WORK_MASTER
-    or set CURRENT_BRANCH master
+    test -z $CURRENT_BRANCH; and set CURRENT_BRANCH $WORK_MASTER
+    test -z $CURRENT_BRANCH; and set CURRENT_BRANCH master
     for D in *
         if test -d $D
             set_color green
@@ -45,4 +46,8 @@ end
 
 function gpull
   git pull $argv origin (git rev-parse --abbrev-ref HEAD)
+end
+
+function nvm
+  bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
 end

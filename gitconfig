@@ -5,6 +5,7 @@
 	co = checkout
 	coa = checkout AXPT-
 	cm = commit -am
+	st = status
 [diff]
 	tool = gvimdiff
 [core]
