@@ -1,3 +1,6 @@
+# Watch logs
+sudo journalctl -f -u NetworkManager
+
 # Gateway ID
 - Ping iz-vpn.iseatz.com
 - Use ip as gateway id
@@ -5,5 +8,20 @@
 # Ciphers
 For the Phase1 Algorithm, enter: 3des-sha1-modp1024!
 For the Phase2 Algorithm, enter: 3des-sha1!
+
+# In opensuse leap
+There is an error trying to connect to the vpn with 2 errors:
+
+ - The gateway id is different from the ip address of the iz vpn. You can find
+ it by doing `journalctl`
+ - The secrets are stored only for the internal weird gatewayid. You can fix it
+ by adding the required secret to a new secret file:
+
+ ```
+ sudo vim /etc/ipsec.d/manual.secrets`
+
+# Add 
+<localiphere> - <ping izvpn here> : PSK <pre shared secret lastpass>
+ ````
 
 More info: https://askubuntu.com/questions/981165/l2tp-ipsec-failing-to-connect-kubuntu-17-10

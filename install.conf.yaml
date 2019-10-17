@@ -15,6 +15,9 @@
     ~/.config/fish/config.fish:
         path: fish/config.fish
         create: true
+    ~/.config/fish/phasnox.fish:
+        path: fish/phasnox.fish
+        create: true
     ~/.vimrc: vim/vimrc
     ~/.config/nvim/init.vim:
         path: vim/vimrc
@@ -118,7 +121,7 @@
     stdout: true
     stderr: true
   -
-    command: ['fisher add matchai/spacefish jethrokuan/fzf danhper/fish-ssh-agent', Install fisher plugins]
+    command: ['fish -c "fisher add edc/bass matchai/spacefish jethrokuan/fzf danhper/fish-ssh-agent"', Install fisher plugins]
     stdin: true
     stdout: true
     stderr: true
