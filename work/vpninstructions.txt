@@ -9,7 +9,7 @@ sudo journalctl -f -u NetworkManager
 For the Phase1 Algorithm, enter: 3des-sha1-modp1024!
 For the Phase2 Algorithm, enter: 3des-sha1!
 
-# In opensuse leap
+# Known issues
 There is an error trying to connect to the vpn with 2 errors:
 
  - The gateway id is different from the ip address of the iz vpn. You can find

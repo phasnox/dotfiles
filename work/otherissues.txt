@@ -1,0 +1,14 @@
+# Vagrant
+
+Vagrant may complain about a couple of things:
+
+## Wrong virtualbox version
+Download a later version of vagrant
+https://www.vagrantup.com/downloads.html
+
+
+## NfS not working
+Make sure nfs is installed.
+In the past, downgrading vagrant has helped
+Download old version from
+https://releases.hashicorp.com/vagrant/

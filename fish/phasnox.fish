@@ -51,3 +51,8 @@ end
 function nvm
   bass source ~/.nvm/nvm.sh --no-use ';' nvm $argv
 end
+
+function grebase
+  git fetch --all
+  git rebase -i $argv
+end

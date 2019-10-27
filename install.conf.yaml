@@ -12,6 +12,9 @@
     stderr: true
 
 - link:
+    ~/.Xresources:
+        path: xterm/Xresources
+        create: true
     ~/.config/fish/config.fish:
         path: fish/config.fish
         create: true
@@ -135,3 +138,9 @@
     stdin: true
     stdout: true
     stderr: true
+  -
+    command: ['xrdb -merge ~/.Xresources', Xterm config update]
+    stdin: true
+    stdout: true
+    stderr: true
+
