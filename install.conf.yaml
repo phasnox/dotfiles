@@ -12,6 +12,9 @@
     stderr: true
 
 - link:
+    ~/.config/alacritty/alacritty.yml:
+        path: alacritty.yml
+        create: true
     ~/.Xresources:
         path: xterm/Xresources
         create: true

@@ -1,0 +1,15 @@
+extends erlang
+
+snippet pry "Insert Breakpoint"
+require IEx; IEx.pry
+endsnippet
+
+snippet io "Insert inspection"
+IO.puts ""
+IO.puts ""
+IO.puts "------------------------------------"
+IO.inspect $0
+IO.puts "------------------------------------"
+IO.puts ""
+IO.puts ""
+endsnippet

@@ -43,7 +43,7 @@ hi SpecialChar    guifg=#dca3a3 guibg=NONE guisp=NONE gui=bold ctermfg=181 cterm
 hi Conditional    guifg=#ffffff guibg=NONE guisp=NONE gui=bold ctermfg=15 ctermbg=NONE cterm=bold
 hi StorageClass   guifg=#ffffff guibg=NONE guisp=NONE gui=bold ctermfg=15 ctermbg=NONE cterm=bold
 hi Todo           guifg=#ffffff guibg=#000000 guisp=#000000 gui=bold ctermfg=15 ctermbg=NONE cterm=bold
-hi Special        guifg=#7f7f7f guibg=NONE guisp=NONE gui=NONE ctermfg=8 ctermbg=NONE cterm=NONE
+hi Special        guifg=#748B09 guibg=NONE guisp=NONE gui=NONE ctermfg=2 ctermbg=NONE cterm=NONE
 hi Label          guifg=#8fffff guibg=NONE guisp=NONE gui=underline ctermfg=123 ctermbg=NONE cterm=underline
 "hi CTagsImport -- no settings --
 hi PMenuSel       guifg=#1f1f1f guibg=#f2eeea guisp=#f2eeea gui=NONE ctermfg=234 ctermbg=255 cterm=NONE
@@ -52,7 +52,7 @@ hi Delimiter      guifg=#8f8f8f guibg=NONE guisp=NONE gui=NONE ctermfg=245 cterm
 hi Statement      guifg=#87d7ff guibg=NONE guisp=NONE gui=bold ctermfg=117 ctermbg=NONE cterm=bold
 "hi SpellRare -- no settings --
 "hi EnumerationValue -- no settings --
-hi Comment       guifg=#7f7f7f guibg=NONE guisp=NONE gui=NONE ctermfg=8 ctermbg=NONE cterm=NONE
+hi Comment       guifg=#748B09 guibg=NONE guisp=NONE gui=NONE ctermfg=8 ctermbg=NONE cterm=NONE
 hi Character     guifg=#dca3a3 guibg=NONE guisp=NONE gui=bold ctermfg=181 ctermbg=NONE cterm=bold
 hi Float         guifg=#9c93b3 guibg=NONE guisp=NONE gui=NONE ctermfg=103 ctermbg=NONE cterm=NONE
 hi Number        guifg=#fce94f ctermfg=Yellow gui=bold cterm=bold
@@ -88,7 +88,7 @@ hi Constant     guifg=#dca3a3 guibg=NONE guisp=NONE gui=bold ctermfg=181 ctermbg
 "hi DefinedName -- no settings --
 hi Tag          guifg=#dca3a3 guibg=NONE guisp=NONE gui=bold ctermfg=181 ctermbg=NONE cterm=bold
 hi String       guifg=#fce94f ctermfg=Yellow gui=bold cterm=bold
-hi PMenuThumb   guifg=NONE guibg=#7f7f7f guisp=#7f7f7f gui=NONE ctermfg=NONE ctermbg=8 cterm=NONE
+hi PMenuThumb   guifg=NONE guibg=#748B09 guisp=#748B09 gui=NONE ctermfg=NONE ctermbg=8 cterm=NONE
 hi MatchParen   guifg=darkgray ctermfg=darkgray cterm=bold gui=bold
 "hi LocalVariable -- no settings --
 hi Repeat      guifg=#87d7ff guibg=NONE guisp=NONE gui=bold ctermfg=117 ctermbg=NONE cterm=bold

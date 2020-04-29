@@ -60,3 +60,4 @@ hi Special term=underline guifg=#5EAFE5
 
 hi Search guibg=#81ABBD
 " hi QtClass guifg=Orange ctermfg=LightBlue
+hi ColorColumn  ctermbg=236   guibg=#303030 ctermfg=NONE guifg=NONE

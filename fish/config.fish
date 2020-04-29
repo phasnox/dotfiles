@@ -19,3 +19,6 @@ ssh-add -q ~/.ssh/work ~/.ssh/personal
 [ -f /home/phasnox/.nvm/versions/node/v10.16.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish ]; and . /home/phasnox/.nvm/versions/node/v10.16.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish
 
 nvm use default > /dev/null
+
+set EDITOR /bin/nvim
+set VISUAL /bin/nvim

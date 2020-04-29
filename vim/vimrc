@@ -12,7 +12,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'cloudhead/neovim-fuzzy'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
 Plug 'tpope/vim-fugitive'
 Plug 'tommcdo/vim-fubitive'
 Plug 'tpope/vim-surround'
@@ -22,8 +21,17 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'sjl/gundo.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ryanoasis/vim-devicons'
 Plug 'elixir-editors/vim-elixir'
-"Plun 'honza/vim-snippets'
+"Plug 'garbas/vim-snipmate'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+"Plug 'xolox/vim-colorscheme-switcher'
+"Plug 'xolox/vim-misc'
+"
+Plug 'preservim/nerdcommenter'
+Plug 'joshdick/onedark.vim'
+Plug 'morhetz/gruvbox'
 
 " Initialize plugin system
 call plug#end()
@@ -50,9 +58,8 @@ set diffopt=vertical
 
 " Better copy paste
 set pastetoggle=<F2>
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 
-colorscheme phasma2
 set autoindent
 set backspace=2
 set cindent
@@ -125,6 +132,7 @@ noremap <leader>p :let @+=@%<CR>
 " FuzzySearch
 "noremap <F3> :FuzzyOpen<CR>
 map <F3> :FuzzyOpen<CR>
+map <leader>s :FuzzyOpen<CR>
 
 " Save shortcut all buffers
 noremap <F5> :wall<CR>
@@ -295,7 +303,7 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 
 " Add diagnostic info for https://github.com/itchyny/lightline.vim
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'phasma2',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
@@ -324,3 +332,27 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols = {} " needed
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*\.ex$'] = '💧'
+let g:WebDevIconsUnicodeDecorateFileNodesPatternSymbols['.*\.exs$'] = '💧'
+
+let g:UltiSnipsExpandTrigger=",c"
+let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+
+
+" If more that 3pm use dark theme
+if strftime("%H") < 13
+  set background=light
+  colorscheme gruvbox
+  "colorscheme summerfruit256
+else
+  set background=dark
+  colorscheme onedark
+  "colorscheme phasma2
+  "colorscheme spaceway
+endif
+
+set termguicolors
+set cursorcolumn
+set cursorline
