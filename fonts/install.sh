@@ -1,11 +1,7 @@
 #!/bin/bash
 
 # Set source and target directories
-fonts_dir="$( cd "$( dirname "$0" )" && pwd )/"
-
-for font in $(cat $fonts_dir/fonts.txt) do
-    wget $font
-done
+this_dir="$( cd "$( dirname "$0" )" && pwd )/"
 
 find_command="find \"$fonts_dir\" \( -name '*.[o,t]tf' -or -name '*.pcf.gz' \) -type f -print0"
 
@@ -19,8 +15,13 @@ else
 fi
 
 # Copy all fonts to user fonts directory
+#echo "Copying fonts..."
+#eval "$find_command" | xargs -0 -I % cp "%" "$font_dir/"
+
 echo "Copying fonts..."
-eval "$find_command" | xargs -0 -I % cp "%" "$font_dir/"
+while read line; do
+    (cd $font_dir && wget $line)
+done < $this_dir/fonts.txt
 
 # Reset font cache on Linux
 if command -v fc-cache @>/dev/null ; then
