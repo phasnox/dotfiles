@@ -1,0 +1,16 @@
+extends ruby
+
+snippet pry "Insert Breakpoint"
+require pry; binding.pry
+endsnippet
+
+snippet ap "Insert inspection"
+require "awesome_print"
+puts ""
+puts ""
+puts "------------------------------------"
+ap $0
+puts "------------------------------------"
+puts ""
+puts ""
+endsnippet

@@ -7,7 +7,7 @@
     stdout: true
     stderr: true
   -
-    command: [git submodule update --init --recursive --quiet, Installing submodules]
+    command: [git submodule update --init --recursive --progress, Installing submodules]
     stdout: true
     stderr: true
 
