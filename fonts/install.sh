@@ -3,7 +3,7 @@
 # Set source and target directories
 this_dir="$( cd "$( dirname "$0" )" && pwd )/"
 
-find_command="find \"$fonts_dir\" \( -name '*.[o,t]tf' -or -name '*.pcf.gz' \) -type f -print0"
+find_command="find \"$this_dir\" \( -name '*.[o,t]tf' -or -name '*.pcf.gz' \) -type f -print0"
 
 if [[ $(uname) == 'Darwin' ]]; then
   # MacOS
@@ -16,7 +16,7 @@ fi
 
 # Copy all fonts to user fonts directory
 #echo "Copying fonts..."
-#eval "$find_command" | xargs -0 -I % cp "%" "$font_dir/"
+eval "$find_command" | xargs -0 -I % cp "%" "$font_dir/"
 
 echo "Copying fonts..."
 while read line; do
