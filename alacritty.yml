@@ -37,6 +37,8 @@ mouse_bindings:
   - { mouse: Left, action: Copy }
 
 schemes:
+  # Solarized light
+  # ---------------
   solarized_light: &light
     # Default colors
     primary:
@@ -69,6 +71,9 @@ schemes:
       magenta: '#6c71c4' # violet
       cyan:    '#93a1a1' # base1
       white:   '#fdf6e3' # base3
+
+  # Solarized dark
+  # ---------------
   solarized_dark: &dark
     # Default colors
     primary:
@@ -102,4 +107,114 @@ schemes:
       cyan:    '#93a1a1' # base1
       white:   '#fdf6e3' # base3
 
-colors: *dark
+  # Afterglow
+  # ---------
+  afterglow: &afterglow
+    # Default colors
+    primary:
+      background: '0x2c2c2c'
+      foreground: '0xd6d6d6'
+
+      dim_foreground:    '0xdbdbdb'
+      bright_foreground: '0xd9d9d9'
+      dim_background:    '0x202020' # not sure
+      bright_background: '0x3a3a3a' # not sure
+
+    # Cursor colors
+    cursor:
+      text:   '0x2c2c2c'
+      cursor: '0xd9d9d9'
+
+    # Normal colors
+    normal:
+      black:   '0x1c1c1c'
+      red:     '0xbc5653'
+      green:   '0x909d63'
+      yellow:  '0xebc17a'
+      blue:    '0x7eaac7'
+      magenta: '0xaa6292'
+      cyan:    '0x86d3ce'
+      white:   '0xcacaca'
+
+    # Bright colors
+    bright:
+      black:   '0x636363'
+      red:     '0xbc5653'
+      green:   '0x909d63'
+      yellow:  '0xebc17a'
+      blue:    '0x7eaac7'
+      magenta: '0xaa6292'
+      cyan:    '0x86d3ce'
+      white:   '0xf7f7f7'
+
+    # Dim colors
+    dim:
+      black:   '0x232323'
+      red:     '0x74423f'
+      green:   '0x5e6547'
+      yellow:  '0x8b7653'
+      blue:    '0x556b79'
+      magenta: '0x6e4962'
+      cyan:    '0x5c8482'
+      white:   '0x828282'
+
+  # Challenger Deep
+  # ---------------
+  challenger_deep: &challenger_deep
+    # Default colors
+    primary:
+      background: '0x1e1c31'
+      foreground: '0xcbe1e7'
+    # Colors the cursor will use if `custom_cursor_colors` is true
+    cursor:
+      text: '0xff271d'
+      cursor: '0xfbfcfc'
+    # Normal colors
+    normal:
+      black:   '0x141228'
+      red:     '0xff5458'
+      green:   '0x62d196'
+      yellow:  '0xffb378'
+      blue:    '0x65b2ff'
+      magenta: '0x906cff'
+      cyan:    '0x63f2f1'
+      white:   '0xa6b3cc'
+    # Bright colors
+    bright:
+      black:   '0x565575'
+      red:     '0xff8080'
+      green:   '0x95ffa4'
+      yellow:  '0xffe9aa'
+      blue:    '0x91ddff'
+      magenta: '0xc991e1'
+      cyan:    '0xaaffe4'
+      white:   '0xcbe3e7'
+
+# Colors (Nord)
+  nord: &nord
+    # Default colors
+    primary:
+      background: '0x2E3440'
+      foreground: '0xD8DEE9'
+    # Normal colors
+    normal:
+      black:   '0x3B4252'
+      red:     '0xBF616A'
+      green:   '0xA3BE8C'
+      yellow:  '0xEBCB8B'
+      blue:    '0x81A1C1'
+      magenta: '0xB48EAD'
+      cyan:    '0x88C0D0'
+      white:   '0xE5E9F0'
+    # Bright colors
+    bright:
+      black:   '0x4C566A'
+      red:     '0xBF616A'
+      green:   '0xA3BE8C'
+      yellow:  '0xEBCB8B'
+      blue:    '0x81A1C1'
+      magenta: '0xB48EAD'
+      cyan:    '0x8FBCBB'
+      white:   '0xECEFF4'
+
+colors: *nord

@@ -1,5 +1,6 @@
 # Shortcuts
 
+alias v "nvim"
 alias swapfix "sudo swapoff -a ; and sudo swapon -a"
 alias docker "sudo docker"
 alias zypper "sudo zypper"
@@ -29,10 +30,57 @@ alias iszdb-dev "psql -h simian-db-dev.iseatz.com -d simian_dev -U dev -p 5432"
 alias iszdb-qa "psql -h simian-db-qa.iseatz.com -d simian_qa -U dev -p 5432"
 alias iszdb-serverless "psql -h simian-dev.czpkx6humqzc.us-east-1.rds.amazonaws.com -d simian -U postgres -p 5432"
 alias iszmolecularupdate "cd ~/src/iseatz/ams/molecular-components/ ; and yarn build ; and cp -r packages/ams-activities/dist ~/src/iseatz/ams/wyndham_web/node_modules/@iseatz/ams-activities/ ; and cp -r packages/ams-core/dist ~/src/iseatz/ams/wyndham_web/node_modules/@iseatz/ams-core/"
-alias yall "yarn install ; and yarn ; and yarn build ; and yarn start"
 alias kraken "set -x -g KRAKEN_WORKING_DIR /home/phasnox/src/iseatz/gen3/gen3_devsetup/bengine; /home/phasnox/.local/bin/kraken"
 alias krakenamex "set -x -g KRAKEN_WORKING_DIR /home/phasnox/src/iseatz/gen3/gen3_devsetup/amex; /home/phasnox/.local/bin/kraken"
 alias envSetFromFile "setEnvFromFile"
+
+# Hazy
+alias hazy.hub "cd ~/src/hazy/hazy/embedded/hub && mix phx.server"
+alias hazy.model_migrate "cd ~/src/hazy/hazy/embedded/model && mix ecto.migrate"
+alias hazy.support "cd ~/src/hazy/hazy_support && dc up -d"
+
+# Hazy working repos
+set hazy_repos model hub
+
+function hazy.test
+    cd ~/src/hazy/hazy/embedded
+    for D in $hazy_repos
+        if test -d $D
+            set_color green
+            echo -e "Testing $D..."
+            set_color normal
+            cd $D; and env MIX_ENV=test mix do deps.get, test --trace --exclude not_implemented
+            prevd
+        end
+    end
+end
+
+function hazy.format
+    cd ~/src/hazy/hazy/embedded
+    for D in $hazy_repos
+        if test -d $D
+            set_color green
+            echo -e "Formatting $D..."
+            set_color normal
+            cd $D; and mix format
+            prevd
+        end
+    end
+end
+
+function hazy.compile
+    cd ~/src/hazy/hazy/embedded
+    for D in $hazy_repos
+        if test -d $D
+            set_color green
+            echo -e "Compiling $D..."
+            set_color normal
+            cd $D; and mix do deps.get --no-archives-check, compile --force --warnings-as-errors
+            prevd
+        end
+    end
+end
+
 
 function git-update-all
     set CURRENT_BRANCH $argv
@@ -76,5 +124,10 @@ function setEnvFromFile
 end
 
 function talon-download
-   wget https://talonvoice.com/update/EyYxCRMGytCRJKV4xWaNJj/$argv[1]
+  wget https://talonvoice.com/update/EyYxCRMGytCRJKV4xWaNJj/$argv[1]
+end
+
+function qmadd
+  echo "qm -a set -k $argv[1] -v $argv[2]"
+  qm -a set -k argv[1] -v argv[2]
 end

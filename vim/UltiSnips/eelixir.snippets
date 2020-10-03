@@ -1,0 +1,21 @@
+extends erlang
+
+snippet < "Insert eex tag"
+<%= $0 %>
+endsnippet
+
+snippet io "Insert io inspect"
+<%
+  IO.puts "-----------------------------"
+  IO.puts "-----------------------------"
+  IO.inspect $0
+  IO.puts "-----------------------------"
+  IO.puts "-----------------------------"
+  %>
+endsnippet
+
+snippet <%=if "Insert if-else"
+<%= if $0 %>
+<% else %>
+<% end %>
+endsnippet

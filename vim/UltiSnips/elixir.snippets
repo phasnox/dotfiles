@@ -4,7 +4,7 @@ snippet pry "Insert Breakpoint"
 require IEx; IEx.pry
 endsnippet
 
-snippet ap "Insert inspection"
+snippet io "Insert inspection"
 IO.puts ""
 IO.puts ""
 IO.puts "------------------------------------"
@@ -12,4 +12,17 @@ IO.inspect $0
 IO.puts "------------------------------------"
 IO.puts ""
 IO.puts ""
+endsnippet
+
+snippet |>io "Insert inspection"
+|> (fn r ->
+  IO.puts ""
+  IO.puts ""
+  IO.puts "------------------------------------"
+  IO.inspect r$0
+  IO.puts "------------------------------------"
+  IO.puts ""
+  IO.puts ""
+  r
+end).()
 endsnippet

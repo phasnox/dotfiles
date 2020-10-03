@@ -22,3 +22,5 @@ nvm use default > /dev/null
 
 set EDITOR /bin/nvim
 set VISUAL /bin/nvim
+
+fish_vi_key_bindings
