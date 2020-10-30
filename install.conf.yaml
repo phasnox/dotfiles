@@ -77,22 +77,7 @@
     stdout: true
     stderr: true
   -
-    command: [gpg --output ~/src/python/bgyeKey.py ~/src/python/bgyeKey.py.gpg, Decrypt bgyeKey]
-    stdin: true
-    stdout: true
-    stderr: true
-  -
-    command: [gpg --output ~/.npmrc ~/npmrc.gpg, Decrypt npmrc]
-    stdin: true
-    stdout: true
-    stderr: true
-  -
     command: [~/.fzf/install, Installing cmd fuzzy completion]
-    stdin: true
-    stdout: true
-    stderr: true
-  -
-    command: [cp ~/.dotfiles/work/userrc ~/iseatz/z2/amex, Install userrc file for amex]
     stdin: true
     stdout: true
     stderr: true
