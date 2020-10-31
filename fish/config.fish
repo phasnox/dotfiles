@@ -14,12 +14,6 @@ source ~/.dotfiles/fish/phasnox.fish
 # Add to ssh agent
 ssh-add -q ~/.ssh/work ~/.ssh/personal
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[ -f /home/phasnox/.nvm/versions/node/v10.16.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish ]; and . /home/phasnox/.nvm/versions/node/v10.16.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.fish
-
-nvm use default > /dev/null
-
 set EDITOR /bin/nvim
 set VISUAL /bin/nvim
 

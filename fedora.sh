@@ -7,7 +7,7 @@ sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.co
 sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 
 sudo dnf update
-sudo dnf install fish vim git dkms python vim-X11 nodejs neovim brave-browser tmux util-linux-user
+sudo dnf install fish vim git dkms python vim-X11 nodejs neovim brave-browser tmux util-linux-user docker-compose
 sudo pip install powerline-status jsbeautifier jsontool
 sudo npm install -g eslint
 

@@ -1,5 +1,8 @@
 window:
   decorations: none
+  bezel:
+    x: 7
+    y: 7
 scrolling:
   history: 10000
   multiplier: 3
@@ -7,10 +10,10 @@ scrolling:
 # Font configuration
 font:
   size: 13
-  normal:
-    #family: AurulentSansMono Nerd Font
+  nomal:
+    family: AurulentSansMono Nerd Font
     #family: 3270Medium Nerd Font
-    family: TerminessTTF Nerd Font
+    #family: TerminessTTF Nerd Font
     #family: Fira Mono for Powerline
     #family: Space Mono for Powerline
     #family: ProggyCleanTTSZBP
@@ -217,4 +220,4 @@ schemes:
       cyan:    '0x8FBCBB'
       white:   '0xECEFF4'
 
-colors: *nord
+colors: *afterglow
