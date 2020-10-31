@@ -42,6 +42,10 @@ alias hazy.support "cd ~/src/hazy/hazy_support && dc up -d"
 # Hazy working repos
 set hazy_repos model hub
 
+# Decat
+alias decatdb-beta "psql -h beta.decat.io -d decat_io -U decat_io_user -p 5477"
+alias decatdb "psql -h decat.io -d decat_io -U decat_io_user -p 5477"
+
 function hazy.test
     cd ~/src/hazy/hazy/embedded
     for D in $hazy_repos
@@ -130,4 +134,15 @@ end
 function qmadd
   echo "qm -a set -k $argv[1] -v $argv[2]"
   qm -a set -k argv[1] -v argv[2]
+end
+
+function amdrun
+  set PACKAGEPATH /home/phasnox/src/aur/amdgpu-pro-installer/pkg/amdgpu-pro-libgl
+  echo $PACKAGEPATH
+  env \
+      LD_LIBRARY_PATH="$PACKAGEPATH/opt/amdgpu-pro/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH"\
+      LIBGL_DRIVERS_PATH="$PACKAGEPATH/usr/lib/x86_64-linux-gnu/dri/"\
+      dri_driver="amdgpu"\
+      GPU_MAX_ALLOC_PERCENT=100\
+      $argv[1]
 end
