@@ -11,9 +11,9 @@ scrolling:
 font:
   size: 13
   nomal:
-    family: AurulentSansMono Nerd Font
+    #family: AurulentSansMono Nerd Font
     #family: 3270Medium Nerd Font
-    #family: TerminessTTF Nerd Font
+    family: TerminessTTF Nerd Font
     #family: Fira Mono for Powerline
     #family: Space Mono for Powerline
     #family: ProggyCleanTTSZBP

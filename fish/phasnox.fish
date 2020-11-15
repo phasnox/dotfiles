@@ -17,6 +17,7 @@ alias tn "env TERM=xterm-256color tmux new-session"
 alias ta "env TERM=xterm-256color tmux attach"
 alias gitfixup "git commit --no-verify -a --fixup HEAD ; and git rebase -i --autosquash HEAD~2"
 alias bgyekey "python ~/src/python/bgyeKey.py"
+alias grinminer="cd ~/src/crypto/grin/lolminer/1.12/ && ./lolMiner"
 
 alias dc "docker-compose"
 alias dce "docker-compose exec"

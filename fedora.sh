@@ -9,7 +9,8 @@ sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 sudo dnf update
 sudo dnf install\
     fish vim git dkms python vim-X11 nodejs neovim brave-browser\
-    tmux util-linux-user docker docker-compose the_silver_searcher
+    tmux util-linux-user docker docker-compose the_silver_searcher\
+    elixir erlang-certifi libsodium-devel# Needed for hazy
 sudo pip install powerline-status jsbeautifier jsontool
 sudo npm install -g eslint
 
