@@ -10,7 +10,8 @@ sudo dnf update
 sudo dnf install\
     fish vim git dkms python vim-X11 nodejs neovim brave-browser\
     tmux util-linux-user docker docker-compose the_silver_searcher\
-    elixir erlang-certifi libsodium-devel# Needed for hazy\
+    # Needed for hazy
+    elixir erlang-certifi libsodium-devel\
     python2 g++ gcc make gcc-c++ sysconftool automake make gcc-c++ kbd\
     libX11-devel libX11-devel fontconfig-devel libXft-devel
 
