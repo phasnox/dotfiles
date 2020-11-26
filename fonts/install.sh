@@ -20,7 +20,7 @@ eval "$find_command" | xargs -0 -I % cp "%" "$font_dir/"
 
 echo "Copying fonts..."
 while read line; do
-    (cd $font_dir && wget $line)
+    (cd $font_dir && wget -N $line)
 done < $this_dir/fonts.txt
 
 # Reset font cache on Linux
