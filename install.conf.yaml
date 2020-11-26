@@ -12,6 +12,7 @@
     stderr: true
 
 - link:
+    ~/.dotfiles: ./
     ~/.config/alacritty/alacritty.yml:
         path: alacritty.yml
         create: true
