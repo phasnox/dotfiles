@@ -12,7 +12,7 @@ sudo dnf install\
     tmux util-linux-user docker docker-compose the_silver_searcher\
     elixir erlang-certifi libsodium-devel# Needed for hazy\
     python2 g++ gcc make gcc-c++ sysconftool automake make gcc-c++ kbd\
-    libx11-devel libX11-devel fontconfig-devel libXft-devel
+    libX11-devel libX11-devel fontconfig-devel libXft-devel
 
 sudo pip install powerline-status jsbeautifier jsontool
 sudo npm install -g eslint
