@@ -12,7 +12,7 @@ sudo dnf install -y \
     tmux util-linux-user docker docker-compose the_silver_searcher\
     elixir erlang-certifi libsodium-devel\
     python2 g++ gcc make gcc-c++ sysconftool automake make gcc-c++ kbd\
-    libX11-devel libX11-devel fontconfig-devel libXft-devel
+    libX11-devel libX11-devel fontconfig-devel libXft-devel libXinerama-devel
 
 pip install powerline-status jsbeautifier jsontool
 npm install -g eslint
