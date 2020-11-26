@@ -7,16 +7,15 @@ sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.co
 sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 
 sudo dnf update
-sudo dnf install\
+sudo dnf install -y \
     fish vim git dkms python vim-X11 nodejs neovim brave-browser\
     tmux util-linux-user docker docker-compose the_silver_searcher\
-    # Needed for hazy
     elixir erlang-certifi libsodium-devel\
     python2 g++ gcc make gcc-c++ sysconftool automake make gcc-c++ kbd\
     libX11-devel libX11-devel fontconfig-devel libXft-devel
 
-sudo pip install powerline-status jsbeautifier jsontool
-sudo npm install -g eslint
+pip install powerline-status jsbeautifier jsontool
+npm install -g eslint
 
 # iSeatz stuff
 #sudo dnf install nfs-utils nfs-utils-dev
