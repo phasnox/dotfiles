@@ -4,8 +4,11 @@ function _fzf_compgen_path
   ag -l
 end
 
-set SPACEFISH_CHAR_SYMBOL ♱
-set fish_greeting "♱          Crux Sancta sit mihi lux          ♱"
+set SPACEFISH_CHAR_SYMBOL "  "
+set SPACEFISH_CHAR_SYMBOL " "
+set SPACEFISH_CHAR_SYMBOL "  "
+set SPACEFISH_CHAR_SYMBOL " "
+set fish_greeting "          Crux Sancta sit mihi lux          "
 set SPACEFISH_ELIXIR_SHOW false
 set SPACEFISH_DOCKER_SHOW false
 

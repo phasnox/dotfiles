@@ -12,6 +12,7 @@ static char *font = "Terminus (TTF):pixelsize=17:antialias=true:autohint=true";
 /* Spare fonts */
 static char *font2[] = {
     //"AurulentSansMono Nerd Font:pixelsize=17:antialias=true:autohint=true",
+    "Font Awesome 5 Pro, Solid:pixelsize=17:antialias=true:autohint=true",
     "Font Awesome 5 Pro:pixelsize=17:antialias=true:autohint=true"
 };
 
