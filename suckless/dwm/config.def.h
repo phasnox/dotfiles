@@ -6,7 +6,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[] = {
-    "AurulentSansMono Nerd Font:pixelsize=17:antialias=true:autohint=true",
+    "AurulentSansMono:pixelsize=17:antialias=true:autohint=true",
     "Font Awesome 5 Pro:pixelsize=17:antialias=true:autohint=true"
 };
 //static const char *fonts[]          = { "3270Medium Nerd Font" };
