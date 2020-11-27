@@ -108,6 +108,11 @@
     stdout: true
     stderr: true
   -
+    command: ['fish -c "set fish_user_paths ~/.local/bin"', Install fisher plugins]
+    stdin: true
+    stdout: true
+    stderr: true
+  -
     command: ['fish -c "fisher install edc/bass matchai/spacefish jethrokuan/fzf danhper/fish-ssh-agent"', Install fisher plugins]
     stdin: true
     stdout: true

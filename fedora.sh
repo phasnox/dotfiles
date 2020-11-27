@@ -8,7 +8,7 @@ sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 
 sudo dnf update
 sudo dnf install -y \
-    fish vim git dkms python vim-X11 nodejs neovim brave-browser\
+    fish vim git dkms python vim-X11 nodejs neovim brave-browser ripgrep\
     tmux util-linux-user docker docker-compose the_silver_searcher\
     elixir erlang-certifi libsodium-devel\
     python2 g++ gcc make gcc-c++ sysconftool automake make gcc-c++ kbd\
