@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=dwm
+Comment=Dynamic win manager
+Exec=/home/phasnox/.local/bin/dwm
+Type=Application
+X-GDM-SessionRegisters=true
