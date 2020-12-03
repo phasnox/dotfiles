@@ -141,6 +141,7 @@ autocmd Filetype scss setlocal ts=2 sts=2 sw=2
 autocmd Filetype yaml setlocal ts=2 sts=2 sw=2
 autocmd Filetype elixir setlocal ts=2 sts=2 sw=2
 autocmd Filetype eelixir setlocal ts=2 sts=2 sw=2
+autocmd Filetype eelixir setlocal syntax=html
 autocmd FileType c,cpp,python,ruby,java,javascript,elixir,eelixir
             \ autocmd BufWritePre <buffer> :%s/\s\+$//e
 autocmd FileType c,cpp,python,ruby,java,javascript,elixir,eelixir
